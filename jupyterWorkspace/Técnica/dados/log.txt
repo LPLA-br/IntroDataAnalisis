@@ -1,0 +1,2 @@
+sed -E 's/,/./g' tabela.csv > Tabela.csv
+cat vg1bl_edr.dat | awk '(FS=" "){print $3 "," $5 "," $7 }' > data.csv

@@ -1,0 +1,55 @@
+CCSD3ZF0000100000001NJPL3IF0PDS200000001 = SFDU_LABEL                         
+                                                                              
+RECORD_TYPE                    = FIXED_LENGTH                                 
+RECORD_BYTES                   = 23                                           
+FILE_RECORDS                   = 40320                                        
+INTERCHANGE_FORMAT             = ASCII                                        
+                                                                              
+^TABLE                         = "TOPO.DAT"                                   
+                                                                              
+DATA_SET_ID                    = "Workshop data                           "   
+                                                                              
+DESCRIPTION                    =                                              
+     "This file was produced by the PDS Atmospheres node using PANDA from     
+      dataset Workshop data for user LEE on  7-Aug-1995 20:42:35.00 using     
+      the following SQL query against the Atmospheres database: SELECT        
+      DISTINCT * FROM MARS_TOPO    WHERE  LATITUDE BETWEEN -55.5000 AND       
+      55.5000"                                                                
+                                                                              
+/* Table Description */                                                       
+                                                                              
+OBJECT                         = TABLE                                        
+    NAME                       = PANDA_QUERY_RESULT                           
+    INTERCHANGE_FORMAT         = ASCII                                        
+    COLUMNS                    = 3                                            
+    ROWS                       = 40320                                        
+    ROW_BYTES                  = 24                                           
+    OBJECT                      = COLUMN                                      
+        NAME                    = "LATITUDE"                                  
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 1                                           
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Latitude of bin center"                                               
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "LONGITUDE"                                 
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 8                                           
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Longitude of bin center"                                              
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "ELEVATION"                                 
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 9                                           
+        START_BYTE              = 15                                          
+        FORMAT                  = "F9.2"                                      
+        DESCRIPTION             =                                             
+       "Elevation (kilometers relative to the 6.1 mb datum)"                  
+    END_OBJECT                                                                
+END_OBJECT                                                                    
+END                                                                           
